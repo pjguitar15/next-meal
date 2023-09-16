@@ -1,5 +1,4 @@
 import Categories from '@/components/categories/Categories'
-import CategoriesTest from '@/components/categories/CategoriesTest'
 import HeroSection from '@/components/homepage-sections/HeroSection'
 
 export default async function Home() {
@@ -11,8 +10,9 @@ export default async function Home() {
   return (
     <main>
       <HeroSection />
-      <Categories allCategories={res.categories} />
-      {/* <CategoriesTest /> */}
+      <div>
+        <Categories allCategories={res.categories} />
+      </div>
     </main>
   )
 }
