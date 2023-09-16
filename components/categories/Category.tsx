@@ -1,10 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-  faMagnifyingGlass,
-  faCircleStop,
-} from '@fortawesome/free-solid-svg-icons'
+
 type AllCategoryItemsProps = {
   strCategory: string
   strCategoryThumb: string
@@ -17,7 +13,7 @@ const Category = ({
   allCategoryItems: AllCategoryItemsProps
 }) => {
   return (
-    <div className='hover:bg-gray-600 hover:scale-105 animation duration-300 cursor-pointer py-12 group rounded-lg'>
+    <div className='hover:bg-gray-600 animation duration-300 cursor-pointer py-12 group rounded-lg'>
       <div className='w-32 mx-auto'>
         <Image
           className='w-full'

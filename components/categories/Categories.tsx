@@ -1,28 +1,39 @@
 'use client'
 import React, { useState } from 'react'
 import Category from './Category'
-import ViewMoreCategories from './NextCategory'
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
+
+import { Swiper, SwiperSlide } from 'swiper/react'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/navigation'
+import 'swiper/css/pagination'
+import 'swiper/css/scrollbar'
 
 const Categories = ({ allCategories }: { allCategories: Object[] }) => {
-  const [categorySize, setCategorySize] = useState([0, 5])
-  const handleViewMore = () => {
-    if (categorySize[1] < 15) {
-      setCategorySize([categorySize[0] + 5, categorySize[1] + 5])
-    } else {
-      setCategorySize([0, 5])
-    }
-  }
   return (
     <section className='bg-zinc-100'>
       <div className='container mx-auto pt-10'>
-        <div className='grid grid-cols-5'>
-          {allCategories
-            .slice(categorySize[0], categorySize[1])
-            .map((item: any, index: number) => (
-              <Category key={index} allCategoryItems={item} />
-            ))}
-        </div>
-        <ViewMoreCategories handleViewMore={handleViewMore} />
+        <Swiper
+          // install Swiper modules
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={5}
+          autoplay
+          // navigation
+          pagination={{ clickable: true }}
+          // scrollbar={{ draggable: true }}
+          onSwiper={(swiper) => console.log(swiper)}
+          onSlideChange={() => console.log('slide change')}
+        >
+          {allCategories.map((item: any, index: number) => (
+            <SwiperSlide key={index}>
+              <Category allCategoryItems={item} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </section>
   )
