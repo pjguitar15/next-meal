@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 type AllCategoryItemsProps = {
   strCategory: string
@@ -12,8 +13,15 @@ const Category = ({
 }: {
   allCategoryItems: AllCategoryItemsProps
 }) => {
+  const router = useRouter()
+  const handleClick = (categoryTitle: string) => {
+    router.push(`category/${categoryTitle.toLowerCase()}`)
+  }
   return (
-    <div className='hover:bg-gray-600 animation duration-300 cursor-pointer py-12 group rounded-lg'>
+    <div
+      onClick={() => handleClick(allCategoryItems.strCategory)}
+      className='hover:bg-gray-600 animation duration-300 cursor-pointer py-12 group rounded-lg'
+    >
       <div className='w-32 mx-auto'>
         <Image
           className='w-full'

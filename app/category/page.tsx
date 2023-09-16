@@ -1,5 +1,5 @@
-import FirstSection from '@/components/category-page/FirstSection'
 import React from 'react'
+import FirstSection from '@/components/category-page/FirstSection'
 
 const page = () => {
   return (

@@ -14,7 +14,7 @@ import Category from './Category'
 
 const CarouselComponent = ({ allCategories }: any) => {
   return (
-    <div>
+    <div className='select-none'>
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
