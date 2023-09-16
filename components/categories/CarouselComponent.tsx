@@ -12,20 +12,21 @@ import 'swiper/css/pagination'
 import 'swiper/css/scrollbar'
 import Category from './Category'
 
-const CarouselComponent = ({ numOfSlides, allCategories }: any) => {
+const CarouselComponent = ({ allCategories }: any) => {
   return (
     <div>
       <Swiper
-        // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
-        slidesPerView={numOfSlides}
+        breakpoints={{
+          420: { slidesPerView: 2 },
+          780: { slidesPerView: 3 },
+          968: { slidesPerView: 3 },
+          1224: { slidesPerView: 4 },
+          1400: { slidesPerView: 5 },
+        }}
         autoplay
-        // navigation
         pagination={{ clickable: true }}
-        // scrollbar={{ draggable: true }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log('slide change')}
       >
         {allCategories.map((item: any, index: number) => (
           <SwiperSlide key={index}>

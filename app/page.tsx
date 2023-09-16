@@ -10,9 +10,7 @@ export default async function Home() {
   return (
     <main>
       <HeroSection />
-      <div>
-        <Categories allCategories={res.categories} />
-      </div>
+      <Categories allCategories={res.categories} />
     </main>
   )
 }
