@@ -1,19 +1,23 @@
 import React from 'react'
 import Image from 'next/image'
 
-const CategoryItem = () => {
+type CategoryItemProps = {
+  imageUrl: string
+  mealName: string
+  mealLink: string
+}
+
+const CategoryItem = ({ imageUrl, mealName, mealLink }: CategoryItemProps) => {
   return (
-    <div className=''>
+    <div className='hover:scale-105 animation duration-200 cursor-pointer group'>
       <Image
-        className='rounded-full'
-        src='https://www.themealdb.com/images/media/meals/1548772327.jpg'
+        className='rounded-full group-hover:shadow-lg'
+        src={imageUrl}
         alt='test'
         width={500}
         height={500}
       />
-      <h6 className='text-center text-lg mt-3 font-semibold'>
-        Baked salmon with fennel & tomatoes
-      </h6>
+      <h6 className='text-center text-md mt-3 font-semibold'>{mealName}</h6>
     </div>
   )
 }

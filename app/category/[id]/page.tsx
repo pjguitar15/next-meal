@@ -8,7 +8,7 @@ const page = ({ params }: any) => {
     <div>
       <FirstSection paramsValue={id} />
       <div className='py-12'>
-        <CategoryItems />
+        <CategoryItems paramsValue={id} />
       </div>
     </div>
   )
