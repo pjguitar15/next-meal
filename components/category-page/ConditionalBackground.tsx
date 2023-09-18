@@ -21,7 +21,7 @@ const BACKGROUNDS = {
 const ConditionalBackground = ({ paramsValue }: any) => {
   console.log(paramsValue)
   return (
-    <div className='absolute inset-0 w-full h-full object-cover -z-10'>
+    <div  >
       {paramsValue === 'beef' && (
         <Image
           className='w-full h-full object-cover'

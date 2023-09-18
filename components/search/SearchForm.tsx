@@ -1,11 +1,13 @@
 'use client'
 import React, { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 const SearchForm = () => {
   const [input, setInput] = useState('')
+  const router = useRouter()
   const submitHandler = (event: any) => {
     event.preventDefault()
-    alert(input)
+    router.push(`/search?q=${input}`)
   }
   return (
     <div>
