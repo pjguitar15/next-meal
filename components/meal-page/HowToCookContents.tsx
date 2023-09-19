@@ -45,7 +45,13 @@ const HowToCookContents = ({
             <h3 className='text-2xl font-semibold mb-2'>Ingredients:</h3>
             <ol className='list-decimal list-inside'>
               {ingredientsArr
-                .filter((item) => item.ingredient !== '')
+                .filter((item) => {
+                  if (item.ingredient !== '') {
+                    if (item.ingredient !== null) {
+                      return item
+                    }
+                  }
+                })
                 .map((item, index) => (
                   <li className='mb-2' key={index}>
                     {item.ingredient} ({item.measure})

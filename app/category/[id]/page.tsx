@@ -8,7 +8,6 @@ const page = ({ params }: any) => {
   return (
     <div>
       <FirstSection paramsValue={id} />
-
       <CategoryCrumbs />
       <div className='py-12'>
         <CategoryItems paramsValue={id} />
