@@ -19,11 +19,12 @@ const CarouselComponent = ({ allCategories }: any) => {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={50}
         breakpoints={{
-          420: { slidesPerView: 2 },
-          780: { slidesPerView: 3 },
+          0: { slidesPerView: 1 },
+          // 420: { slidesPerView: 1 },
+          780: { slidesPerView: 2 },
           968: { slidesPerView: 3 },
           1224: { slidesPerView: 4 },
-          1400: { slidesPerView: 5 },
+          1400: { slidesPerView: 4 },
         }}
         autoplay
         pagination={{ clickable: true }}

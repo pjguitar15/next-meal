@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { CircleFlag } from 'next-circle-flags'
+import Link from 'next/link'
 
 type SearchResultProps = {
   item: {
@@ -188,9 +189,12 @@ const SearchResult = ({ item }: SearchResultProps) => {
             ))}
           </li>
         </ul>
-        <button className='mt-auto mb-0 ms-0 bg-gray-600 hover:bg-gray-700 animation duration-200 text-white text-sm py-1 rounded mx-auto px-4'>
+        <Link
+          href={`/meal/${item.idMeal}`}
+          className='mt-auto mb-0 ms-0 bg-gray-600 hover:bg-gray-700 animation duration-200 text-white text-sm py-1 rounded mx-auto px-4'
+        >
           Click to learn
-        </button>
+        </Link>
       </div>
     </div>
   )

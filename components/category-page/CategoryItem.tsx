@@ -1,5 +1,7 @@
+'use client'
 import React from 'react'
 import Image from 'next/image'
+import { useRouter } from 'next/navigation'
 
 type CategoryItemProps = {
   imageUrl: string
@@ -8,8 +10,15 @@ type CategoryItemProps = {
 }
 
 const CategoryItem = ({ imageUrl, mealName, mealLink }: CategoryItemProps) => {
+  const router = useRouter()
+  const handleClick = () => {
+    router.push(`/meal/${mealLink}`)
+  }
   return (
-    <div className='hover:scale-105 animation duration-200 cursor-pointer group'>
+    <div
+      onClick={handleClick}
+      className='hover:scale-105 animation duration-200 cursor-pointer group'
+    >
       <Image
         className='rounded-full group-hover:shadow-lg'
         src={imageUrl}

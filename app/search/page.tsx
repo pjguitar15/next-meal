@@ -17,7 +17,7 @@ const page = async ({ searchParams }: SearchParamsProps) => {
 
   const res = await data.json()
   const allSearchResults = res.meals
-  console.log(allSearchResults)
+
   return (
     <>
       <div className='relative'>

@@ -15,7 +15,7 @@ const SearchForm = () => {
         <input
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          className='py-4 w-full px-8 outline-0 border rounded-full'
+          className='py-2 lg:py-4 w-full px-8 outline-0 border rounded-full'
           type='text'
           placeholder='Search for an ingredient'
         />

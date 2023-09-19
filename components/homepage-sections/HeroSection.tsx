@@ -5,7 +5,9 @@ const HeroSection = () => {
   return (
     <div className='hero relative'>
       <div className='container mx-auto pt-36 py-20'>
-        <h1 className='text-center text-5xl text-white'>Discover Great Food</h1>
+        <h1 className='text-center text-3xl md:text-4xl lg:text-5xl text-white'>
+          Discover Great Food
+        </h1>
         <SearchComponent />
       </div>
     </div>
