@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import SearchResults from '@/components/search/SearchResults'
 import SearchComponent from '@/components/search/SearchComponent'
+import SearchCrumbs from '@/components/search/SearchCrumbs'
 
 interface SearchParamsProps {
   searchParams: { q: string }
@@ -37,6 +38,7 @@ const page = async ({ searchParams }: SearchParamsProps) => {
           </div>
         </div>
       </div>
+      <SearchCrumbs />
       <SearchResults
         searchParams={searchParams.q}
         allSearchResults={allSearchResults}

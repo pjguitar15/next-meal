@@ -17,15 +17,15 @@ const MealPageCrumbs = ({ allCurrentData }: any) => {
         >
           Home
         </Link>
-        <span className='cursor-pointer text-gray-400'>/</span>
+        <span className='text-gray-400'>/</span>
         <span
           onClick={backHandler}
-          className='cursor-pointer text-gray-400 hover:text-gray-100 transition duration-300'
+          className='cursor-pointer text-gray-400 hover:text-gray-100 transition duration-300 '
         >
-          Categories
+          Search Results
         </span>
-        <span className='cursor-pointer text-gray-400'>/</span>
-        <span className='cursor-pointer text-gray-100'>
+        <span className='text-gray-400'>/</span>
+        <span className='text-gray-100 font-bold'>
           {allCurrentData.strMeal}
         </span>
       </div>

@@ -191,9 +191,9 @@ const SearchResult = ({ item }: SearchResultProps) => {
         </ul>
         <Link
           href={`/meal/${item.idMeal}`}
-          className='mt-auto mb-0 ms-0 bg-gray-600 hover:bg-gray-700 animation duration-200 text-white text-sm py-1 rounded mx-auto px-4'
+          className='mt-auto mb-0 ms-0 bg-gray-600 hover:bg-gray-700 animation duration-200 text-white text-sm py-2 mx-auto px-4'
         >
-          Click to learn
+          View Procedures
         </Link>
       </div>
     </div>
